@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="AutoMarket Pro is Kenya's trusted marketplace for buying and renting cars. Browse SUVs, sedans, pickups, luxury cars and affordable vehicles.">
+
+<meta name="keywords" content="cars for sale Kenya, rent cars Kenya, Toyota Prado, BMW X5, Mercedes C-Class, buy cars, vehicle marketplace">
+
+<meta name="author" content="AutoMarket Pro">
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0f172a">
+
+<meta name="application-name" content="AutoMarket Pro">
+
+<meta property="og:title"
+content="AutoMarket Pro">
+
+<meta property="og:description"
+content="Buy and Rent Premium Cars in Kenya">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:url"
+content="https://www.automarketpro.com">
+
+<meta property="og:image"
+content="prado.jpg">
+
+<meta property="og:site_name"
+content="AutoMarket Pro">
+
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="AutoMarket Pro">
+
+<meta name="twitter:description"
+content="Buy or Rent Premium Cars">
+
+<meta name="twitter:image"
+content="prado.png">
+
+<title>AutoMarket Pro | Buy & Rent Cars in Kenya</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script type="application/ld+json">
+
+{
+"@context":"https://schema.org",
+"@type":"AutoDealer",
+
+"name":"AutoMarket Pro",
+
+"url":"https://www.automarketpro.com",
+
+"description":"Kenya's trusted online marketplace for buying and renting vehicles.",
+
+"telephone":"+254700123456",
+
+"address":{
+"@type":"PostalAddress",
+"addressCountry":"KE"
+}
+
+}
+
+</script>
+
+</head>
+
+<body class="bg-slate-50">
+
+<!-- Navigation -->
+<nav class="bg-slate-900 text-white">
+
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<h1 class="text-2xl font-bold">
+AutoMarket Pro
+</h1>
+
+<!-- Desktop Menu -->
+<div class="space-x-6 hidden md:block">
+
+<a href="#" class="hover:text-blue-400">Home</a>
+
+<a href="browse.html" class="hover:text-blue-400">
+Browse Cars
+</a>
+
+<a href="browse.html" class="hover:text-blue-400">
+Rent or Buy Now
+</a>
+
+<a href="#about" class="hover:text-blue-400">
+About
+</a>
+
+<a href="contact.html" class="hover:text-blue-400">
+Contact
+</a>
+
+</div>
+
+<!-- Mobile Menu Button -->
+
+<button
+class="md:hidden text-2xl"
+onclick="toggleMenu()">
+
+<i class="fas fa-bars"></i>
+
+</button>
+
+</div>
+
+<!-- Dropdown Menu -->
+
+<div
+id="mobileMenu"
+class="hidden bg-slate-800">
+
+<a href="#"
+class="block px-6 py-3 hover:bg-slate-700">
+Home
+</a>
+
+<a href="browse.html"
+class="block px-6 py-3 hover:bg-slate-700">
+Browse Cars
+</a>
+
+<a href="buy.html"
+class="block px-6 py-3 hover:bg-slate-700">
+Buy Cars
+</a>
+
+<a href="rent.html"
+class="block px-6 py-3 hover:bg-slate-700">
+Rent Cars
+</a>
+
+<a href="#about"
+class="block px-6 py-3 hover:bg-slate-700">
+About Us
+</a>
+
+<a href="contact.html"
+class="block px-6 py-3 hover:bg-slate-700">
+Contact Us
+</a>
+
+</div>
+
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-slate-900 to-gray-900 text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-24 text-center">
+
+        <h2 class="text-5xl font-bold mb-4">
+            Buy or Rent Your Dream Car
+        </h2>
+
+        <p class="text-xl mb-8">
+            Premium marketplace for vehicle sales and rentals.
+        </p>
+
+        <div class="flex justify-center gap-4">
+
+            <a href="browse.html">
+                <button class="bg-green-600 px-6 py-3 rounded-lg hover:bg-blue-700">
+                    Browse Cars
+                </button>
+            </a>
+
+            <a href="rent.html">
+                <button class="bg-white text-slate-900 px-6 py-3 rounded-lg hover:bg-gray-200">
+                    Rent or Buy Now
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Featured Cars -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+
+    <h3 class="text-3xl font-bold mb-8">
+        Featured Vehicles
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Toyota Prado -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+
+            <img src="Prado.jpg"
+            Alt="Toyota prado image"
+            class="h-56 w-full object-cover">
+            
+
+            <div class="p-5">
+
+                <h4 class="font-bold text-xl">
+                    Toyota Prado
+                </h4>
+
+                <p class="text-gray-600">
+                    KES 4,500,000
+                </p>
+
+                <p class="mt-2">
+                    Rent: KES 8,000/day
+                </p>
+<button
+onclick="toggleDetails('prado')"
+class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+View Details
+</button>
+
+<div id="prado" class="hidden mt-4 p-4 bg-gray-500 rounded-lg">
+<h5 class="font-bold text-lg mb-2">Toyota Prado</h5>
+
+<p><strong>Engine:</strong> 2.8L Turbo Diesel</p>
+
+<p><strong>Transmission:</strong> Automatic</p>
+
+<p><strong>Fuel:</strong> Diesel</p>
+
+<p><strong>Seats:</strong> 7</p>
+
+<p><strong>Drive:</strong> 4WD</p>
+
+<p><strong>Color:</strong> White</p>
+
+<p><strong>Condition:</strong> Excellent</p>
+</div>
+
+
+            </div>
+
+        </div>
+
+        <!-- BMW -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+
+            <img
+            src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200"
+          Alt="BMW X 5 image"
+            class="h-56 w-full object-cover">
+
+            <div class="p-5">
+
+                <h4 class="font-bold text-xl">
+                    BMW X5
+                </h4>
+
+                <p class="text-gray-600">
+                    KES 7,200,000
+                </p>
+
+                <p class="mt-2">
+                    Rent: KES 15,000/day
+                </p>
+<button
+onclick="toggleDetails('bmw')"
+class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+View Details
+</button>
+
+<div id="bmw" class="hidden mt-4 p-4 bg-gray-500 rounded-lg">
+
+<h5 class="font-bold text-lg mb-2">BMW X5</h5>
+
+<p><strong>Engine:</strong> 3.0L Twin Turbo</p>
+
+<p><strong>Transmission:</strong> Automatic</p>
+
+<p><strong>Fuel:</strong> Petrol</p>
+
+<p><strong>Seats:</strong> 5</p>
+
+<p><strong>Drive:</strong> AWD</p>
+
+<p><strong>Color:</strong> Black</p>
+
+<p><strong>Condition:</strong> Excellent</p>
+
+</div>
+
+                
+            </div>
+
+        </div>
+
+        <!-- Mercedes -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+
+            <img src=" Mercedes.webp "
+            Alt="Mercedes C-Class image"
+           
+            class="h-56 w-full object-cover">
+
+            <div class="p-5">
+
+                <h4 class="font-bold text-xl">
+                    Mercedes C-Class
+                </h4>
+
+                <p class="text-gray-600">
+                    KES 5,800,000
+                </p>
+
+                <p class="mt-2">
+                    Rent: KES 12,000/day
+                </p>
+
+<button
+onclick="toggleDetails('benz')"
+class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+View Details
+</button>
+
+<div id="benz" class="hidden mt-4 p-4 bg-gray-500 rounded-lg">
+
+<h5 class="font-bold text-lg mb-2">Mercedes C-Class</h5>
+
+<p><strong>Engine:</strong> 2.0L Turbo</p>
+
+<p><strong>Transmission:</strong> Automatic</p>
+
+<p><strong>Fuel:</strong> Petrol</p>
+
+<p><strong>Seats:</strong> 5</p>
+
+<p><strong>Drive:</strong> Rear Wheel Drive</p>
+
+<p><strong>Color:</strong> Silver</p>
+
+<p><strong>Condition:</strong> Excellent</p>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Features -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+
+    <h3 class="text-3xl font-bold mb-8">
+        Why Choose Us?
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow">
+            <i class="fa-solid fa-car text-3xl"></i>
+            <h4 class="font-bold mt-3">
+                Large Inventory
+            </h4>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+            <i class="fa-solid fa-credit-card text-3xl"></i>
+            <h4 class="font-bold mt-3">
+                Secure Payments
+            </h4>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+            <i class="fa-solid fa-headset text-3xl"></i>
+            <h4 class="font-bold mt-3">
+                24/7 Support
+            </h4>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- About Us -->
+<section id="about" class="bg-slate-100 py-16">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<h3 class="text-3xl font-bold text-center mb-8">
+About AutoMarket Pro
+</h3>
+
+<p class="text-gray-700 text-lg leading-8 text-center max-w-4xl mx-auto">
+AutoMarket Pro is one of Kenya's trusted online marketplaces for buying and renting quality vehicles. We connect buyers and renters with reliable dealers, offering affordable prices, secure transactions and a wide selection of vehicles including SUVs, sedans, luxury cars, pickups and family vehicles.
+</p>
+
+<div class="grid md:grid-cols-3 gap-8 mt-12">
+
+<div class="bg-white shadow-lg rounded-xl p-6 text-center">
+<i class="fa-solid fa-car text-4xl text-blue-600 mb-4"></i>
+<h4 class="font-bold text-xl mb-2">Quality Vehicles</h4>
+<p class="text-gray-600">
+All listed vehicles are carefully inspected to ensure quality and reliability.
+</p>
+</div>
+
+<div class="bg-white shadow-lg rounded-xl p-6 text-center">
+<i class="fa-solid fa-handshake text-4xl text-green-600 mb-4"></i>
+<h4 class="font-bold text-xl mb-2">Trusted Dealers</h4>
+<p class="text-gray-600">
+Work with verified sellers and rental partners across Kenya.
+</p>
+</div>
+
+<div class="bg-white shadow-lg rounded-xl p-6 text-center">
+<i class="fa-solid fa-shield-halved text-4xl text-red-600 mb-4"></i>
+<h4 class="font-bold text-xl mb-2">Secure Transactions</h4>
+<p class="text-gray-600">
+Enjoy safe payments and transparent vehicle listings.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- Footer -->
+
+<footer class="bg-slate-900 text-white py-12">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-4 gap-10">
+
+<!-- Company -->
+
+<div>
+
+<h3 class="text-2xl font-bold mb-4">
+AutoMarket Pro
+</h3>
+
+<p class="text-gray-300">
+Kenya's trusted marketplace for buying and renting quality vehicles at affordable prices.
+</p>
+
+</div>
+
+<!-- Quick Links -->
+
+<div>
+
+<h4 class="font-semibold text-lg mb-4">
+Quick Links
+</h4>
+
+<ul class="space-y-2">
+
+<li>
+<a href="#" class="hover:text-blue-400">
+Home
+</a>
+</li>
+
+<li>
+<a href="browse.html" class="hover:text-blue-400">
+Browse Cars
+</a>
+</li>
+
+<li>
+<a href="browse.html" class="hover:text-blue-400">
+Rent Cars
+</a>
+</li>
+
+<li>
+<a href="#about" class="hover:text-blue-400">
+About Us
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Contact -->
+
+<div>
+
+<h4 class="font-semibold text-lg mb-4">
+Contact Us
+</h4>
+
+<p>
+<i class="fa-solid fa-phone mr-2"></i>
++254 700 123 456
+</p>
+
+<p class="mt-2">
+<i class="fa-solid fa-envelope mr-2"></i>
+info@automarketpro.com
+</p>
+
+<p class="mt-2">
+<i class="fa-solid fa-location-dot mr-2"></i>
+Nairobi, Kenya
+</p>
+
+</div>
+
+<!-- Social -->
+
+<div>
+
+<h4 class="font-semibold text-lg mb-4">
+Follow Us
+</h4>
+
+<div class="flex space-x-4 text-2xl">
+
+<a href="#" class="hover:text-blue-400">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="#" class="hover:text-sky-400">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+<a href="#" class="hover:text-pink-500">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="#" class="hover:text-red-500">
+<i class="fab fa-youtube"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr class="border-slate-700 my-8">
+
+<div class="text-center text-gray-400">
+
+<p>
+© 2026 AutoMarket Pro. All Rights Reserved.
+</p>
+
+<p class="mt-2">
+Buy • Sell • Rent Cars Across Kenya
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+
+function toggleDetails(id){
+
+const details = document.getElementById(id);
+
+details.classList.toggle("hidden");
+
+}
+
+
+function toggleMenu(){
+
+document
+.getElementById("mobileMenu")
+.classList.toggle("hidden");
+
+}
+</script>
+
+
+
+</body>
+</html>ody>
+</html>

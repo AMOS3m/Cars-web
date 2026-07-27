@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Cart | AutoMarket Pro</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-100 bg-gradient-to-r from-slate-900 to-gray-300 text-white">
+
+<!-- Navbar -->
+
+<nav class="bg-slate-900 text-white">
+
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<h1 class="text-3xl font-bold">
+
+AutoMarket Pro
+
+</h1>
+
+<a href="browse.html"
+class="bg-green-600 px-4 py-2 rounded">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Continue Shopping
+
+</a>
+
+</div>
+
+</nav>
+
+<!-- Heading -->
+
+<section class="max-w-7xl mx-auto px-6 py-10">
+
+<h2 class="text-4xl font-bold mb-2">
+
+My Cart
+
+</h2>
+
+<p class="text-black-600">
+
+Cars you've added to your cart.
+
+</p>
+
+</section>
+
+<!-- Cart Items -->
+
+<section class="max-w-7xl mx-auto px-6">
+
+<div
+id="cartContainer"
+class="grid md:grid-cols-2 gap-8">
+
+</div>
+
+</section>
+
+<!-- Summary -->
+
+<section class="max-w-7xl mx-auto px-6 py-10">
+
+<div class="bg-black shadow rounded-xl p-6">
+
+<h3 class="text-white text-2xl font-bold mb-7">
+
+Cart Summary
+
+</h3>
+
+<p class="text-1g">
+
+Total Cars:
+
+<span id="totalCars">
+
+0
+
+</span>
+
+</p>
+
+<p class="text-lg mt-2">
+
+Total Price:
+
+<strong>
+
+KES
+
+<span id="totalPrice">
+
+0
+
+</span>
+
+</strong>
+
+</p>
+
+<div class="flex gap-4 mt-6">
+
+<button
+
+onclick="clearCart()"
+
+class="bg-red-600 text-white px-5 py-3 rounded">
+
+Clear Cart
+
+</button>
+
+<a href="checkout.html"
+
+class="bg-green-600 text-white px-5 py-3 rounded">
+
+Proceed to Checkout
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+let cart =
+JSON.parse(localStorage.getItem("cart")) || [];
+
+const container =
+document.getElementById("cartContainer");
+
+function renderCart(){
+
+container.innerHTML="";
+
+let total=0;
+
+document.getElementById("totalCars")
+.textContent=cart.length;
+
+if(cart.length===0){
+
+container.innerHTML=`
+
+<div class="bg-black rounded-xl shadow p-10 text-center col-span-2">
+
+<h2 class="text-3xl font-bold">
+
+Your Cart is Empty
+
+</h2>
+
+<p class="mt-3 text-white-600">
+
+Browse cars and add your favourites.
+
+</p>
+
+<a href="browse.html"
+
+class="inline-block mt-5 bg-green-600 text-white px-6 py-3 rounded">
+
+Browse Cars
+
+</a>
+
+</div>
+
+`;
+
+document.getElementById("totalPrice")
+.textContent="0";
+
+return;
+
+}
+
+cart.forEach((car,index)=>{
+
+total += car.price;
+
+container.innerHTML += `
+
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+
+<img
+
+src="${car.image}"
+
+class="w-full h-56 object-cover">
+
+<div class="p-5">
+
+<h3 class="text-2xl font-bold">
+
+${car.name}
+
+</h3>
+
+<p>
+
+${car.brand}
+
+</p>
+
+<p>
+
+${car.type}
+
+</p>
+
+<p class="mt-2">
+
+<strong>
+
+KES ${car.price.toLocaleString()}
+
+</strong>
+
+</p>
+
+<p>
+
+Rent:
+
+KES ${car.rent.toLocaleString()}/day
+
+</p>
+
+<div class="flex gap-3 mt-5">
+
+<a href="buy.html"
+
+class="bg-green-600 text-white px-4 py-2 rounded">
+
+Buy Now
+
+</a>
+
+<a href="rent.html"
+
+class="bg-gray-400 text-white px-4 py-2 rounded">
+
+Rent
+
+</a>
+
+<button
+
+onclick="removeItem(${index})"
+
+class="bg-gray-600 text-white px-4 py-2 rounded">
+
+Remove
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("totalPrice")
+.textContent=total.toLocaleString();
+
+}
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+renderCart();
+
+}
+
+function clearCart(){
+
+if(confirm("Clear the cart?")){
+
+cart=[];
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+renderCart();
+
+}
+
+}
+
+renderCart();
+
+</script>
+
+
+<!-- Footer -->
+
+<footer class="bg-slate-900 text-white mt-16">
+
+<div class="max-w-7xl mx-auto px-6 py-10">
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<!-- About -->
+
+<div>
+
+<h3 class="text-2xl font-bold mb-4">
+AutoMarket Pro
+</h3>
+
+<p class="text-gray-300">
+
+Your trusted marketplace for buying and renting quality vehicles across Kenya. Browse, compare, and purchase your dream car with confidence.
+
+</p>
+
+</div>
+
+<!-- Quick Links -->
+
+<div>
+
+<h3 class="text-xl font-semibold mb-4">
+Quick Links
+</h3>
+
+<ul class="space-y-2">
+
+<li>
+<a href="car.html" class="hover:text-blue-400">
+Home
+</a>
+</li>
+
+<li>
+<a href="browse.html" class="hover:text-blue-400">
+Browse Cars
+</a>
+</li>
+
+<li>
+<a href="buy.html" class="hover:text-blue-400">
+Buy Cars
+</a>
+</li>
+
+<li>
+<a href="rent.html" class="hover:text-blue-400">
+Rent Cars
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Contact -->
+
+<div>
+
+<h3 class="text-xl font-semibold mb-4">
+Contact Us
+</h3>
+
+<p class="mb-2">
+<i class="fa-solid fa-phone text-blue-400"></i>
++254 700 123 456
+</p>
+
+<p class="mb-2">
+<i class="fa-solid fa-envelope text-blue-400"></i>
+info@automarketpro.com
+</p>
+
+<div class="flex gap-4 text-2xl mt-4">
+
+<a href="#" class="hover:text-blue-500">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="#" class="hover:text-sky-400">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+<a href="#" class="hover:text-pink-500">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="#" class="hover:text-green-500">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr class="border-gray-700 my-6">
+
+<div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+
+<p>
+© 2026 AutoMarket Pro. All Rights Reserved.
+</p>
+
+<p>
+Secure • Reliable • Affordable
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
