@@ -23,7 +23,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <body class="bg-gray-100">
 
 <!-- Navbar -->
-
 <nav class="bg-slate-900 text-white">
 
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -32,29 +31,70 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 AutoMarket Pro
 </h1>
 
-<div class="space-x-4">
+<!-- Desktop Menu -->
+<div class="hidden md:flex space-x-4">
 
-<a href="car.html">Home</a>
+<a href="car.html" class="hover:text-blue-400">Home</a>
 
-<a href="buy.html">Buy</a>
+<a href="browse.html" class="hover:text-blue-400">Browse Cars</a>
 
-<a href="rent.html">Rent</a>
+<a href="buy.html" class="hover:text-blue-400">Buy</a>
 
-<a href="cart.html" class="relative">
+<a href="rent.html" class="hover:text-blue-400">Rent</a>
+
+<a href="cart.html" class="relative hover:text-blue-400">
 
 <i class="fa-solid fa-cart-shopping text-xl"></i>
 
 <span
 id="cartCount"
 class="absolute -top-2 -right-3 bg-red-600 text-white text-xs px-2 rounded-full">
-
 0
-
 </span>
 
 </a>
 
 </div>
+
+<!-- Mobile Menu Button -->
+<button
+id="menuBtn"
+class="md:hidden text-3xl">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+</div>
+
+<!-- Mobile Dropdown -->
+<div
+id="mobileMenu"
+class="hidden bg-slate-800">
+
+<a href="car.html" class="block px-6 py-3 hover:bg-slate-700">
+Home
+</a>
+
+<a href="browse.html" class="block px-6 py-3 hover:bg-slate-700">
+Browse Cars
+</a>
+
+<a href="buy.html" class="block px-6 py-3 hover:bg-slate-700">
+Buy Cars
+</a>
+
+<a href="rent.html" class="block px-6 py-3 hover:bg-slate-700">
+Rent Cars
+</a>
+
+<a href="cart.html" class="block px-6 py-3 hover:bg-slate-700">
+Cart
+</a>
+
+<a href="contact.html" class="block px-6 py-3 hover:bg-slate-700">
+Contact Us
+</a>
 
 </div>
 
@@ -580,6 +620,16 @@ document
 document
 .getElementById("resetBtn")
 .addEventListener("click",resetFilters);
+
+
+  // Mobile Menu Toggle
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+});
 
 </script>
 
